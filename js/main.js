@@ -1,3 +1,3 @@
-const europp = '1 billion';
+'use strict';
 
-console.log(europp);
+const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '');
