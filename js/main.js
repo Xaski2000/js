@@ -1,3 +1,3 @@
-const europp = '1 billion';
+const europpp = '1 billion';
 
-console.log(europp);
+console.log(europpp);
