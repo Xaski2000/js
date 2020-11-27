@@ -14,14 +14,22 @@ const personalMovieDB = {
 	movies: {},
 	actors: {},
 	genres: [],
-	privet: false
+	privat: false
 };
+
+function showMyDB() {
+	if (personalMovieDB.privat == false) {
+		console.log(personalMovieDB);
+	}
+}
+
+showMyDB();
 
 function rememberMyFilms() {
 	for (let i = 0; i < 2; i++) {
 		const a = prompt('Один из последних просмотренных фильмов?', ''),
 				b = prompt('На сколько оцените его?', '');
-		if (a != '' && b != '' && a != null && b != null && a.length < 50 ){
+		if (a != '' && b != '' && a != null && b != null && a.length < 50){
 			console.log('done');
 			personalMovieDB.movies[a] = b;
 		}else{
@@ -31,7 +39,16 @@ function rememberMyFilms() {
 	}
 }
 
-rememberMyFilms();
+// rememberMyFilms();
+
+function writeYourGenres() {
+	for (let i = 1; i < 4; i++) {
+		const a = prompt('Ваш любимый жанр под номером ' + i, '');
+		personalMovieDB.genres[i-1] = a;
+	}
+}
+
+writeYourGenres();
 
 function detectPersonsalLevel() {
 	if (numberOfFilms < 10 && numberOfFilms > 0) {
@@ -46,5 +63,3 @@ function detectPersonsalLevel() {
 }
 
 detectPersonsalLevel();
-
-console.log(personalMovieDB);
