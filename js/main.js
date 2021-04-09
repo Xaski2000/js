@@ -1,4 +1,4 @@
-// // 'use strict';
+// 'use strict';
 
 const personalMovieDB = {
 	count: 0,
@@ -7,7 +7,7 @@ const personalMovieDB = {
 	genres: [],
 	privat: false,
 	start: function() {
-		personalMovieDB.count = +prompt('Сколько фильмов вы уже посмотрели?', '');
+		personalMovieDB.count = +prompt('Сколько фильмов вы уже посмотрели?', 'Пример');
 		while(personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count)) {
 			personalMovieDB.count = +prompt('Сколько фильмов вы уже посмотрели?', '');
 		}
@@ -63,4 +63,6 @@ const personalMovieDB = {
 	}
 };
 
+// personalMovieDB.start();
 personalMovieDB.writeYourGenres();
+console.log(personalMovieDB.genres);
